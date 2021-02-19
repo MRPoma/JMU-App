@@ -5668,7 +5668,7 @@ def TeamMatchPN(state):
     matchid = st.sidebar.selectbox("Select MatchID", natsorted(match_df.MatchID.unique()))    
     match_df = match_df[match_df['MatchID'] == matchid]
 
-    minute = st.sidebar.slider("Select Range of Minutes", 0,120,90)
+    minute = st.sidebar.slider("Select Range of Minutes", 0,120,(0,90))
     minute_df = match_df[match_df['Minute'] <= minute]
     
     PoPs = ['Establish', 'Evolve', 'Innovate']
