@@ -5669,7 +5669,7 @@ def TeamMatchPN(state):
     match_df = match_df[match_df['MatchID'] == matchid]
 
     minute = st.sidebar.slider("Select Range of Minutes", 0,120, (0,90), 1)
-    minute_df = match_df[match_df['Minute'].between(minute[0], minute[1])]
+    minute_df = match_df[match_df.Minute.between(minute[0], minute[1])]
     
     
     PoPs = ['Establish', 'Evolve', 'Innovate']
