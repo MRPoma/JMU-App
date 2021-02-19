@@ -5690,7 +5690,8 @@ def TeamMatchPN(state):
         y = table['Y']
         touches_raw = table['xPR'].tolist()
         #maxpass = table['MaxPV'].tolist()
-        maxpass = 0.08 * (minute[1]/90)
+        subminute = minute[1] - minute[0]
+        maxpass = 0.08 * (subminute/90)
     
         touches = []
         for item in touches_raw:
