@@ -537,7 +537,7 @@ def main():
         "Team Defensive Corners": DefCorner,
         "Team Goal Kicks": TeamGoalKicks,
         "Opposition PassSonar": OppPassSonar,
-        "Opposition Passing Engine": OppPassingEngine,
+        "Opposition Passing From/To Zones": OppPassingEngine,
         "Player Shots": PlayerShot,
         "Goalkeeper Shot Map": GKShotMap,
         "Player Pass": PlayerPass,
@@ -713,7 +713,7 @@ def TeamGoalKicks(state):
     fig,ax = plt.subplots(figsize=(22,28))
     vertfull_pitch('white', 'black', ax)
     plt.title(str(season)+' - '+str(team)+' Goal Kick Scatter Map', fontproperties=headers, color="black")
-    plt.scatter(match_df.DestX,match_df.DestY, marker='o', facecolors="#B2B2B2", s=120,
+    plt.scatter(68-match_df.DestY,match_df.DestX, marker='o', facecolors="#B2B2B2", s=120,
             edgecolors="black",zorder=zo)
 
     st.pyplot(fig)
