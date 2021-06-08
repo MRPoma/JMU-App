@@ -42,7 +42,7 @@ except ModuleNotFoundError:
 
 @st.cache
 def load_defense_data(season, team):
-    url = 'https://drive.google.com/file/d/1lqhBblZE4q8BtEvg-knQslstjkNHpr4B/view?usp=sharing'
+    url = 'https://drive.google.com/file/d/1m9yRgIa_STLkV3_Y27dieU-r8o7JRKsL/view?usp=sharing'
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
     df = pd.read_csv(path)
     df = df[(df.Team.isin(team)) & (df.Season.isin(season))]
@@ -50,7 +50,7 @@ def load_defense_data(season, team):
 
 @st.cache
 def load_pass_data(season, team, opp):
-    url = 'https://drive.google.com/file/d/1bGCQaFW2j74-PmfrnvYstp2mr35A1lLT/view?usp=sharing'
+    url = 'https://drive.google.com/file/d/1phHRMDUtfG1hTmtYRMQ-RHl1x1D5KCo6/view?usp=sharing'
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
     df = pd.read_csv(path)
     if opp == 'yes':
@@ -61,7 +61,7 @@ def load_pass_data(season, team, opp):
 
 @st.cache
 def load_carry_data(season, team):
-    url = 'https://drive.google.com/file/d/1v0uKVZmbUop_FoJovoSppHd3IcNtu2dg/view?usp=sharing'
+    url = 'https://drive.google.com/file/d/1ig2-i6MIV-OISVfsqrfwEXYBzfo0NXCa/view?usp=sharing'
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
     df = pd.read_csv(path)
     df = df[(df.Team.isin(team)) & (df.Season.isin(season))]
@@ -69,7 +69,7 @@ def load_carry_data(season, team):
 
 @st.cache
 def load_shot_data(season, team, opp):
-    url = 'https://drive.google.com/file/d/1XzUPFbpbZM31qOip2ikPh0SNS3twwu0H/view?usp=sharing'
+    url = 'https://drive.google.com/file/d/1qVUSbq4FQ0GtdX19091KoEk7ZsmqPMpx/view?usp=sharing'
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
     df = pd.read_csv(path)
     if opp == 'yes':
@@ -81,7 +81,7 @@ def load_shot_data(season, team, opp):
 @st.cache
 def load_sm_data():
     #return pd.read_csv('/Users/michael/Documents/Python/CSV/NCAA Season and Team.csv')
-    url = 'https://drive.google.com/file/d/1QiraIDw-f9uwf1Ww53e_P4PZIrTJSNO_/view?usp=sharing'
+    url = 'https://drive.google.com/file/d/1kwSn2bRoQ6VBQAaF9sKuZPIWpRQieoxG/view?usp=sharing'
     path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
     return pd.read_csv(path)
 
